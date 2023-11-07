@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests;
 
-
 use Illuminate\Foundation\Http\FormRequest;
 
 class WikiCreateRequest extends FormRequest
@@ -12,7 +11,7 @@ class WikiCreateRequest extends FormRequest
         return [
             'title' => 'required|string',
             'body' => 'required|string',
-            'image' => 'mimes:jpg,bmp,png'
+            'image' => 'mimes:jpg,bmp,png',
         ];
     }
 }

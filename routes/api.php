@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route::middleware('auth:sanctum')
-    Route::prefix('wiki')
+Route::prefix('wiki')
     ->group(function () {
         Route::post('/create', [WikiController::class, 'create'])->name('wiki.create');
     });

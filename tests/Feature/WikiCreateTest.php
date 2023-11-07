@@ -8,8 +8,8 @@ use Tests\TestCase;
 
 class WikiCreateTest extends TestCase
 {
-
     use RefreshDatabase;
+
     /**
      * A basic test example.
      */
@@ -18,7 +18,7 @@ class WikiCreateTest extends TestCase
         $this->refreshTestDatabase();
 
         $wiki = Wiki::factory()->make();
-        $response = $this->post(route('wiki.create'),$wiki->toArray());
+        $response = $this->post(route('wiki.create'), $wiki->toArray());
 
         $response->assertStatus(200);
     }

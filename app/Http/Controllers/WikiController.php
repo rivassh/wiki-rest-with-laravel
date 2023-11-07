@@ -9,11 +9,12 @@ class WikiController
 {
     public function create(WikiCreateRequest $request)
     {
-        if ($request->validated())
+        if ($request->validated()) {
             Wiki::create($request->safe()->only([
                 'title',
                 'body',
-//                'image' //@todo: handle
+                //                'image' //@todo: handle
             ]));
+        }
     }
 }
